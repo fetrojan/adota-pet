@@ -9,18 +9,31 @@
 </head>
 <body>
     <div class="container-home">
-        <h1>Cadastro de pets</h1>
+        <h1>Cadastro de Pets</h1>
         <form>
             <div class="row-form">
-                <div class="input-container">
+                <div class="input-container flex-45">
                     <label for="nome">Nome do pet</label>
-                    <input id="nome" type="text" placeholder="Digite o nome completo do pet">
+                    <input id="nome" type="text" placeholder="Digite o nome do seu pet">
                 </div>
-                <div class="input-container">
+                <div class="input-container flex-45">
                     <label for="idade">Idade</label>
-                    <input id="idade" type="number" placeholder="Digite a idade do pet">
+                    <input id="idade" type="number" placeholder="Digite a idade do seu pet">
                 </div>
             </div>
+
+            <div class="input-container">
+                <label for="cor">Cor do pet</label>
+                <input id="cor" type="color">
+            </div>
+
+            <div class="input-container">
+                <label for="descricao">Descrição</label>
+                <textarea id="descricao" rows="5" placeholder="Descreva algumas características do seu pet"></textarea>
+            </div>
+
+            <div class="button-container"><button type="submit" class="button-submit">Salvar</button></div>
+
         </form>
     </div>
 

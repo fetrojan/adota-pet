@@ -4,14 +4,19 @@ body {
 
 .container-home {
     width: 70%;
-    background-color: #FFF;
+    background-color: rgba(255, 255, 255, 0.6);
     margin: 40px auto;
+    box-shadow: 0 4px 6px 2px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 15px;
+    backdrop-filter: blur(2px);
 }
 
 .container-home h1 {
     color: #666163;
     text-align: center;
-    font-size: 24px;
+    font-size: 26px;
+    font-family:'Gill Sans MT', sans-serif;
 }
 
 .input-container {
@@ -20,20 +25,63 @@ body {
 }
 
 .input-container label {
+    margin-top: 10px;
     margin-bottom: 5px;
+    font-size: 18px;
+    color: #666163;
+    font-family:'Gill Sans MT', sans-serif;
 }
 
-.input-container input {
+.input-container input, textarea {
     width: 100%;
     box-sizing: border-box;
     height: 35px;
     border-radius: 8px;
-    font-size: 18px;
+    font-size: 14px;
     outline-color: #666163;
     border: 1px solid #cde0bf;
+    resize: vertical;
+    padding: 5px;
+    font-family:'Gill Sans', sans-serif;
+}
+
+.input-container input[type="color"] {
+    border-radius: 5px;
+    padding: 0;
+    cursor: pointer;
+}
+
+.input-container textarea {
+    height: auto;
 }
 
 .row-form {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+}
+
+.flex-45 {
+    flex-basis: 45%;
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button-submit {
+    width: 100px;
+    margin-top: 10px;
+    border-radius: 8px;
+    color: #cde0bf;
+    background-color: #666163;
+    font-size: 16px;
+    font-family: 'Gill Sans MT', sans-serif;
+    font-weight: 600;
+}
+
+.button-submit:hover {
+    background-color: #cde0bf;
+    color: #666163;
+    cursor: pointer;
 }
