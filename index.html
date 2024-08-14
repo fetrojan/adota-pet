@@ -10,11 +10,18 @@
 <body>
     <div class="container-home">
         <h1>Cadastro de Pets</h1>
-        <form>
+        <form id="petCadastro">
+
+            <div class="input-container">
+                <label for="foto">Foto do Pet</label>
+                <input type="url" name="foto" id="foto">
+            </div>
+
             <div class="row-form">
                 <div class="input-container flex-45">
                     <label for="nome">Nome do pet</label>
                     <input id="nome" type="text" placeholder="Digite o nome do seu pet">
+                    <span class="error-message" id="error-nome"></span>
                 </div>
                 <div class="input-container flex-45">
                     <label for="idade">Idade</label>
@@ -32,11 +39,22 @@
                 <textarea id="descricao" rows="5" placeholder="Descreva algumas características do seu pet"></textarea>
             </div>
 
+            <div class="input-container">
+                <label for="tipopet">Tipo</label>
+                <select name="tipopet" id="tipopet">
+                    <option value="" disabled selected>Selecione o tipo do seu pet</option>
+                    <option value="cachorro">Cachorro</option>
+                    <option value="gato">Gato</option>
+                    <option value="reptil">Réptil</option>
+                    <option value="passaro">Pássaro</option>
+                </select>
+            </div>
+
             <div class="button-container"><button type="submit" class="button-submit">Salvar</button></div>
 
         </form>
     </div>
 
-    
+    <script src="scripts/cadastroPet.js"></script>
 </body>
 </html>

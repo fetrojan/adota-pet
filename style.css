@@ -32,7 +32,7 @@ body {
     font-family:'Gill Sans MT', sans-serif;
 }
 
-.input-container input, textarea {
+.input-container input, textarea, select {
     width: 100%;
     box-sizing: border-box;
     height: 35px;
@@ -45,10 +45,16 @@ body {
     font-family:'Gill Sans', sans-serif;
 }
 
+.input-container select, select option {
+    font-family: 'Gill Sans', sans-serif;
+    color: #666163;
+}
+
 .input-container input[type="color"] {
     border-radius: 5px;
     padding: 0;
     cursor: pointer;
+    width: 15%;
 }
 
 .input-container textarea {
@@ -84,4 +90,25 @@ body {
     background-color: #cde0bf;
     color: #666163;
     cursor: pointer;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    display: none;
+}
+
+input.error-border {
+    border: 2px solid red;
+}
+
+@media (max-width: 800px) {
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .container-home {
+        width: 90%;
+    }
 }
