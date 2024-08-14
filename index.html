@@ -15,6 +15,7 @@
             <div class="input-container">
                 <label for="foto">Foto do Pet</label>
                 <input type="url" name="foto" id="foto">
+                <span class="error-message" id="error-foto"></span>
             </div>
 
             <div class="row-form">
@@ -25,7 +26,7 @@
                 </div>
                 <div class="input-container flex-45">
                     <label for="idade">Idade</label>
-                    <input id="idade" type="number" placeholder="Digite a idade do seu pet">
+                    <input id="idade" type="number" min="0" max="20" placeholder="Digite a idade do seu pet">
                 </div>
             </div>
 
@@ -37,6 +38,7 @@
             <div class="input-container">
                 <label for="descricao">Descrição</label>
                 <textarea id="descricao" rows="5" placeholder="Descreva algumas características do seu pet"></textarea>
+                <span class="error-message" id="error-descricao"></span>
             </div>
 
             <div class="input-container">
@@ -48,6 +50,7 @@
                     <option value="reptil">Réptil</option>
                     <option value="passaro">Pássaro</option>
                 </select>
+                <span class="error-message" id="error-tipo"></span>
             </div>
 
             <div class="button-container"><button type="submit" class="button-submit">Salvar</button></div>

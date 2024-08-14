@@ -98,8 +98,8 @@ body {
     display: none;
 }
 
-input.error-border {
-    border: 2px solid red;
+.error-border{
+    border: 2px solid red !important;
 }
 
 @media (max-width: 800px) {
