@@ -50,6 +50,7 @@ function cadastrarPet(event) {
     }
 
     const pet = {
+        id: Date.now(), //id: crypto.randomUUID()
         nome: nome.value,
         idade: idade.value,
         descricao: descricao.value,
