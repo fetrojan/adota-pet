@@ -1,8 +1,8 @@
 const nome = document.getElementById("nome")
-const idade = document.getElementById('idade').value
+const idade = document.getElementById('idade')
 const url = document.getElementById('foto')
 const descricao = document.getElementById('descricao')
-const cor = document.getElementById('cor').value
+const cor = document.getElementById('cor')
 const tipo = document.getElementById('tipopet')
 const errorFoto = document.getElementById('error-foto')
 const errorNome = document.getElementById('error-nome')
@@ -51,14 +51,19 @@ function cadastrarPet(event) {
 
     const pet = {
         nome: nome.value,
-        idade: idade,
+        idade: idade.value,
         descricao: descricao.value,
-        foto: url,
-        cor: cor,
+        foto: url.value,
+        cor: cor.value,
         tipo: tipo.value
     }
 
-    localStorage.setItem("pet", JSON.stringify(pet))
+    let listaNoLocalStorage = JSON.parse(localStorage.getItem("pets"))
+    if(listaNoLocalStorage === null) listaNoLocalStorage = []
+
+    listaNoLocalStorage.push(pet)
+
+    localStorage.setItem("pets", JSON.stringify(listaNoLocalStorage))
 
     console.log(pet)
 }
@@ -73,3 +78,41 @@ document.getElementById("nome").addEventListener('input', function() {
 })
 
 document.getElementById("petCadastro").addEventListener("submit", cadastrarPet)
+
+/* Opção de função para não repetir codigo 
+
+function validarCampo(input, errorElement) {
+    if(input.value.trim() === "") {
+        errorElement.innerText = "Este campo é obrigatório"
+        errorElement.style.display = 'block'
+        input.classList.add('error-border')
+        return false
+    } else {
+        errorElement.style.display = 'none'
+        input.classList.remove('error-border')
+        return true
+    }
+}
+
+function cadastrarPet(event) {
+    event.preventDefault()
+
+    const isFotoValid = validarCampo(url, errorFoto)
+    const isNomeValid = validarCampo(nome, errorNome)
+    const isDescricaoValid = validarCampo(descricao, errorDescricao)
+    const isTipoValid = validarCampo(tipo, errorTipo)
+
+    if (isFotoValid && isNomeValid && isDescricaoValid && isTipoValid) {
+        const pet = {
+            nome: nome.value,
+            idade: idade,
+            descricao: descricao.value,
+            foto: url,
+            cor: cor,
+            tipo: tipo.value
+        }
+
+        localStorage.setItem("pet", JSON.stringify(pet))
+        console.log(pet)
+    }
+} */
