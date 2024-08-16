@@ -112,3 +112,27 @@ body {
         width: 90%;
     }
 }
+
+/* CSS da tela Listagem Pets */
+.container-pets {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.img-pet {
+    width: 150px;
+    height: 150px;
+}
+
+.item-pet {
+    background-color: #FFF;
+    border-radius: 8px;
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

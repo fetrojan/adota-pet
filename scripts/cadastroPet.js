@@ -49,6 +49,8 @@ function cadastrarPet(event) {
         tipo.classList.remove('error-border')
     }
 
+    if(nome.value && foto.value && descricao.value && tipo.value) {
+
     const pet = {
         id: Date.now(), //id: crypto.randomUUID()
         nome: nome.value,
@@ -67,6 +69,8 @@ function cadastrarPet(event) {
     localStorage.setItem("pets", JSON.stringify(listaNoLocalStorage))
 
     console.log(pet)
+    document.getElementById("petCadastro").reset()
+}
 }
 
 document.getElementById("nome").addEventListener('input', function() {
