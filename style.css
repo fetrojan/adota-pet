@@ -1,5 +1,31 @@
 body {
     background-image: url("/assets/bg-adotapet.jpg");
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    display: flex;
+    justify-content: space-around;
+    background-color: #cde0bf;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.header a{
+    margin: 0 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #666163;
+    font-family: 'Gill Sans MT', sans-serif;
+    font-weight: 600;
+}
+
+.nav-link:hover {
+    color: #79aa55;
+    cursor: pointer;
 }
 
 .container-home {
@@ -114,25 +140,38 @@ body {
 }
 
 /* CSS da tela Listagem Pets */
+h1 {
+    color: #666163;
+    text-align: center;
+    font-size: 26px;
+    font-family:'Gill Sans MT', sans-serif;
+}
+
 .container-pets {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
     gap: 10px;
+    font-family:'Gill Sans MT', sans-serif;
+    color: #666163;
+    padding: 0 20px;
 }
 
 .img-pet {
     width: 150px;
     height: 150px;
     object-fit: cover;
+    border-radius: 20px;
 }
 
 .item-pet {
-    background-color: #FFF;
-    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 6px 2px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
     padding: 10px;
     width: 200px;
-    border: 1px solid #000;
+    border: 1px solid #666163;
     display: flex;
     flex-direction: column;
     align-items: center;

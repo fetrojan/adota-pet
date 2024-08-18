@@ -16,6 +16,7 @@ function carregarDados() {
         meuH2.innerText = pet.nome
         const meuButton = document.createElement('button')
         meuButton.innerText = 'Adotar'
+        meuButton.classList.add('button-submit')
         minhaDiv.appendChild(minhaImg)
         minhaDiv.appendChild(meuH2)
         minhaDiv.appendChild(meuButton)
