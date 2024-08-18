@@ -17,6 +17,7 @@ function carregarDados() {
         const meuButton = document.createElement('button')
         meuButton.innerText = 'Adotar'
         meuButton.classList.add('button-submit')
+        meuButton.onclick = () => adotar(pet.id)
         minhaDiv.appendChild(minhaImg)
         minhaDiv.appendChild(meuH2)
         minhaDiv.appendChild(meuButton)
@@ -32,7 +33,15 @@ function carregarDados() {
         listaPets.appendChild(minhaDiv)
         // listaPets.appendChild(card)
     })
+}
 
+function adotar(idRecebido) {
+    const petsNaMemoria = JSON.parse(localStorage.getItem('pets'))
+    const petsFiltrados = petsNaMemoria.filter((item) => item.id !== idRecebido)
+
+    localStorage.setItem('pets', JSON.stringify(petsFiltrados))
+    document.getElementById('lista-pets').innerText = ''
+    carregarDados()
 }
 
 document.addEventListener('DOMContentLoaded', carregarDados)
