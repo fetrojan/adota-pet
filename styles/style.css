@@ -176,3 +176,8 @@ h1 {
     flex-direction: column;
     align-items: center;
 }
+
+.container-botoes {
+    display: flex;
+    gap: 5px;
+}

@@ -84,6 +84,23 @@ document.getElementById("nome").addEventListener('input', function() {
 
 document.getElementById("petCadastro").addEventListener("submit", cadastrarPet)
 
+descricao.addEventListener('blur', function() {
+    let valorDigitado = this.value
+
+    const palavrasInadequadas = ["java", "github", "capivara", "pamonha", "delphin"]
+
+    palavrasInadequadas.forEach((palavra) => {
+        if(valorDigitado.includes(palavra)) {
+            valorDigitado = valorDigitado.replaceAll(palavra, "*".repeat(palavra.length))
+        }
+    })
+
+    // this.value = valorDigitado
+    descricao.value = valorDigitado
+
+})
+
+
 /* Opção de função para não repetir codigo 
 
 function validarCampo(input, errorElement) {
