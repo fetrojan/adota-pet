@@ -181,3 +181,12 @@ h1 {
     display: flex;
     gap: 5px;
 }
+
+/* CSS da tela detalhes */
+
+.espaco-cor {
+    display: inline-block; 
+    width: 100%; 
+    height: auto;
+    border-radius: 10px;
+}
