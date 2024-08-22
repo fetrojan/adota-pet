@@ -20,7 +20,7 @@ function carregarDados() {
 
         const btnDeletar = document.createElement('button')
         btnDeletar.innerText = 'Deletar'
-        btnDeletar.classList.add('button-submit')
+        btnDeletar.classList.add('button-del')
         btnDeletar.onclick = () => deletar(pet.id)
 
         const btnAdotar = document.createElement('button')

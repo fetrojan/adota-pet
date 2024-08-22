@@ -4,7 +4,7 @@ body {
     padding: 0;
 }
 
-.header{
+.custom-header{
     display: flex;
     justify-content: space-around;
     background-color: #cde0bf;
@@ -12,18 +12,18 @@ body {
     font-size: 16px;
 }
 
-.header a{
+.custom-header a{
     margin: 0 20px;
 }
 
-.nav-link {
+.custom-nav-link {
     text-decoration: none;
     color: #666163;
     font-family: 'Gill Sans MT', sans-serif;
     font-weight: 600;
 }
 
-.nav-link:hover {
+.custom-nav-link:hover {
     color: #79aa55;
     cursor: pointer;
 }
@@ -36,6 +36,15 @@ body {
     padding: 10px;
     border-radius: 15px;
     backdrop-filter: blur(2px);
+}
+
+.preview-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+    margin: 0 auto;
 }
 
 .container-home h1 {
@@ -162,6 +171,7 @@ h1 {
     height: 150px;
     object-fit: cover;
     border-radius: 20px;
+    box-shadow: 0 4px 6px 2px rgba(0, 0, 0, 0.3);
 }
 
 .item-pet {
@@ -182,11 +192,41 @@ h1 {
     gap: 5px;
 }
 
+.button-del {
+    width: 100px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: none;
+    color: #cde0bf;
+    background-color: #8e1f1f;
+    font-size: 16px;
+    font-family: 'Gill Sans MT', sans-serif;
+    font-weight: 600;
+}
+
+.button-del:hover {
+    background-color: #b40a0a;
+    color: #ffffff;
+    cursor: pointer;
+}
+
 /* CSS da tela detalhes */
+
 
 .espaco-cor {
     display: inline-block; 
-    width: 100%; 
+    width: 30px; 
     height: auto;
-    border-radius: 10px;
+    border-radius: 50%;
+}
+
+.custom-image {
+    width: 100%;
+    height: 200px;
+    max-width: 200px; 
+    object-fit: cover;
+}
+
+.custom-font-family {
+    font-family:'Gill Sans MT', sans-serif;
 }

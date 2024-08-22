@@ -8,6 +8,7 @@ const errorFoto = document.getElementById('error-foto')
 const errorNome = document.getElementById('error-nome')
 const errorDescricao = document.getElementById('error-descricao')
 const errorTipo = document.getElementById('error-tipo')
+const silhueta = document.getElementById('silhueta-img')
 
 
 function cadastrarPet(event) {
@@ -70,6 +71,7 @@ function cadastrarPet(event) {
 
     console.log(pet)
     document.getElementById("petCadastro").reset()
+    silhueta.setAttribute('src', '/assets/silhueta.jpg');
 }
 }
 
@@ -83,6 +85,28 @@ document.getElementById("nome").addEventListener('input', function() {
 })
 
 document.getElementById("petCadastro").addEventListener("submit", cadastrarPet)
+
+url.addEventListener('blur', function() {
+    const urlDigitada = this.value.trim();
+    
+    if (urlDigitada === "") {
+        silhueta.setAttribute('src', '/assets/silhueta.jpg');
+        return;
+    }
+    
+    const imgTeste = new Image();
+    imgTeste.src = urlDigitada;
+    
+    imgTeste.onload = function() {
+        // Se a imagem carregou corretamente
+        silhueta.setAttribute('src', urlDigitada);
+    };
+    
+    imgTeste.onerror = function() {
+        // Se a imagem falhou ao carregar
+        silhueta.setAttribute('src', '/assets/error-img.png');
+    };
+})
 
 descricao.addEventListener('blur', function() {
     let valorDigitado = this.value

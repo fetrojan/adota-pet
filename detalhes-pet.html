@@ -5,27 +5,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Detalhes Pet</title>
+    <link rel="stylesheet" href="styles/normalize.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
-    <h1>Detalhes Pet</h1>
 
-    <div class="card mt-4 mx-auto p-2" style="width: 60%">
-        <div class="d-flex gap-4">
-            <img src="https://mega.ibxk.com.br/2020/09/01/01103316776079.jpg" class="img-thumbnail" width="400px" id="foto" />
-            <div>
-                <h1 id="nome"></h1>
-                <ul class="list-group">
-                    <li class="list-group-item">Idade: <span id="idade"></span></li>
-                    <li class="list-group-item d-flex gap-1">Cor: <span id="cor"></span></li>
-                    <li class="list-group-item">Tipo: <span id="tipo"></span></li>
-                    <li class="list-group-item">
-                        Descrição: <span id="descricao"></span>
-                    </li>
-                </ul>
+    <div class="custom-header">
+        <header>
+            <a href="index.html" class="custom-nav-link">Cadastro de Pets</a>
+            <a href="listagemPets.html" class="custom-nav-link">Lista de Pets</a>
+        </header>
+    </div>
+
+    <h1 class="fw-bold mt-2">Detalhes do Pet</h1>
+
+    <div class="card mt-4 p-1 container-home">
+        <div class="row g-1 align-items-center custom-font-family">
+            <div class="col-md-4 d-flex justify-content-center align-items-center p-2">
+                <img src="" class="img-fluid rounded custom-image" id="foto" />
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h1 id="nome" class="card-title mb-2 fw-bold"></h1>
+                    <ul class="list-group">
+                        <li class="list-group-item fw-bold text-secondary">Idade: <span id="idade" class="ms-1 fw-normal"></span></li>
+                        <li class="list-group-item d-flex gap-1 fw-bold text-secondary">Cor: <span id="cor"></span></li>
+                        <li class="list-group-item fw-bold text-secondary">Tipo: <span id="tipo" class="ms-1 fw-normal"></span></li>
+                        <li class="list-group-item fw-bold text-secondary">
+                            Descrição: <span id="descricao" class="ms-1 fw-normal"></span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
